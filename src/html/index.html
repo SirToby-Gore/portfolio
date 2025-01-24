@@ -4,10 +4,152 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Portfolio</title>
-	<link rel="stylesheet" href="../scss/styles.scss">
+	<link rel="stylesheet" href="../css/styles.css">
 	<link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
 </head>
 <body>
+	<div id="navbar">
+		<a href="#projects">projects</a>
+		<a href="#about">about</a>
+		<a href="#skills">skills</a>
+		<a href="#contact">contact</a>
+
+		<h2 class="small-title">Toby Gore</h2>
+	</div>
+	
+	<section id="projects">
+		<div class="banner">
+			<h2 class="center-title">Projects</h2>
+
+			<div class="slider">
+				<div class="item">
+					<img src="project-img-1.png" alt="Haas">
+				</div>
+				<div class="item">
+					<img src="project-img-2.png" alt="Calculator">
+				</div>
+				<div class="item">
+					<img src="project-img-3.png" alt="Weather App">
+				</div>
+				<div class="item">
+					<img src="project-img-4.png" alt="Chat GPT">
+				</div>
+				<div class="item">
+					<img src="project-img-5.png" alt="Game of Life">
+				</div>
+				<div class="item">
+					<img src="project-img-6.png" alt="Muli-player Snake">
+				</div>
+				<div class="item">
+					<img src="project-img-7.png" alt="Type Safe Python">
+				</div>
+				<div class="item">
+					<img src="project-img-8.png" alt="Linux">
+				</div>
+				<div class="item">
+					<img src="project-img-9.png" alt="Tic Tac Toe">
+				</div>
+				<div class="item">
+					<img src="project-img-10.png" alt="Gravity 4 in a Row">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="about">
+		<h2 class="big-title">About</h2>
+
+		<p>Welcome to my programming portfolio!
+			I'm passionate about building things that make a difference.
+			I'm currently working on a project called <b>Gravity 4 in a Row</b>, and I'm always looking for new challenges to tackle.</p>
+		  
+		<p>I'm passionate about using my skills to create innovative and impactful solutions.
+			I'm always learning new things, and I'm excited to see what the future holds for me in the world of programming.</p>
+		
+		<p>Yet despite being the second smartest man since Einstein I'm still learning.</p>
+
+		<p>In my own time I gain no which pleasure from coloured pixels on a screen but rather my heart's content when I get to the sun.</p>
+	</section>
+
+	<section id="skills">	
+		<h2 class="big-title">Skills</h2>
+
+		<div class="image-slider">
+			<div class="list">
+				<div class="item" title="Dart">
+					<img src="../assets/images/dart-icon.png" alt="Dart">
+				</div>
+				<div class="item" title="Python">
+					<img src="../assets/images/python-icon.png" alt="Python">
+				</div>
+				<div class="item" title="Ruby">
+					<img src="../assets/images/ruby-icon.png" alt="Ruby">
+				</div>
+				<div class="item" title="HTML">
+					<img src="../assets/images/html-icon.png" alt="HTML">
+				</div>
+				<div class="item" title="CSS">
+					<img src="../assets/images/css-icon.png" alt="CSS">
+				</div>
+				<div class="item" title="SASS & SCSS">
+					<img src="../assets/images/scss & sass-icon.png" alt="SCSS & SASS">
+				</div>
+				<div class="item" title="JS">
+					<img src="../assets/images/js-icon.png" alt="JS">
+				</div>
+				<div class="item" title="TS">
+					<img src="../assets/images/ts-icon.png" alt="TS">
+				</div>
+				<div class="item" title="PHP">
+					<img src="../assets/images/php-icon.png" alt="PHP">
+				</div>
+				<div class="item" title="Java">
+					<img src="../assets/images/java-icon.png" alt="Java">
+				</div>
+				<div class="item" title="Rust">
+					<img src="../assets/images/rust-icon.png" alt="Rust">
+				</div>
+				<div class="item" title="Bash">
+					<img src="../assets/images/bash-icon.png" alt="Bash">
+				</div>
+				<div class="item" title="Go">
+					<img src="../assets/images/go-icon.png" alt="Go">
+				</div>
+				<div class="item" title="C++">
+					<img src="../assets/images/c++-icon.png" alt="C++">
+				</div>
+			</div>
+		</div>
+
+		<p>I have experience in a variety of programming languages, including Dart,
+			Python, Ruby, HTML, CSS, SCSS & SASS, JavaScript, TypeScript, PHP, Java,
+			Rust, Bash, and Go. I'm also familiar with C++.</p>
+	</section>
+
+	<section id="contact">
+		<h2 class="big-title">Get in Contact</h2>
+
+		<div class="links">
+			<a href="tel:+123456789"><img src="../assets/images/tel-icon.png" alt="tel"></a>
+			<a href="mailto:email@example.com"><img src="../assets/images/mail-icon.png" alt="email"></a>
+			<a href="http://github.com/"><img src="../assets/images/github-icon.png" alt="github"></a>
+			<a href="http://linkedin.com/"><img src="../assets/images/linkedin-icon.png" alt="linkedin"></a>
+		</div>
+
+		<form action="./" class="submit-form">
+			<label for="name">Your Name</label>
+			<input type="text" name="name" placeholder="John Doe" required>
+
+			<label for="email">Your Email</label>
+			<input type="email" name="email" placeholder="email@example" required>
+
+			<label for="message">Your Message</label>
+			<textarea cols="50" rows="10" name="message" placeholder="Your message" required></textarea>
+
+			<input type="submit" value="Send your message">
+		</form>
+	</section>
+
 	<script src="../JS/scripts.js"></script>
 </body>
 </html>
