@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use 'sass:color';
 
 :root {
 	color-scheme: light dark;
@@ -17,11 +18,13 @@ body {
 
 	text-decoration: underline;
 	text-transform: uppercase;
-
+	
 	@if $use-margin {
 		margin: 0 $size;
 	}
 }
+
+$button-colour: orange;
 
 $sizes: (
 	small: 1.5rem,
@@ -34,6 +37,25 @@ $sizes: (
 		@include title-style($size-value, true);
 	}
 }
+
+$text-colours: (
+	wht: white,
+	rd: red,
+	org: orange,
+	yel: yellow,
+	grn: green,
+	blu: blue,
+	pur: purple,
+	blk: black,
+);
+
+@each $colour-name, $colour-value in $text-colours {
+	.#{$colour-name}-text {
+		color: $colour-value;
+	}
+}
+
+$button-colour: orange;
 
 .banner {
 	width: 100%;
@@ -161,6 +183,18 @@ $sizes: (
 			
 			img {
 				width: 100%;
+
+				filter: grayscale(100%);
+
+				&:hover {
+					filter: grayscale(0);
+
+					scale: 1.2;
+				}
+			}
+
+			.square-img {
+				aspect-ratio: 1;
 			}
 		}
 	}
@@ -175,8 +209,6 @@ $sizes: (
 	}
 }
 
-$button-colour: orange;
-
 @mixin link-array-style() {
 	display: flex;
 	flex-direction: row;
@@ -189,6 +221,8 @@ $button-colour: orange;
 		margin: 1rem;
 
 		text-transform: uppercase;
+
+		font-family: 'Courier New', Courier, monospace;
 
 		&:hover,
 		&:focus-within,
@@ -219,11 +253,19 @@ section {
 	z-index: 5;
 
 	@include link-array-style();
+
+	h2 {
+		position: absolute;
+		
+		right: 1rem;
+		
+		font-family: "IBM Plex Serif", serif !important;
+	}
 }
 
 #projects {
-	background-color: light-dark(darkcyan, darken(darkcyan, 10%));
-	color: white
+	$colour: goldenrod;
+	background-color: light-dark($colour, color.adjust($colour, $lightness: -10%));
 }
 
 #about {
@@ -242,15 +284,40 @@ section {
 #contact {
 	background-color: light-dark(green, darkgreen);
 
-	padding: 2rem;
-
 	.links {
 		@include link-array-style();
+
+		display: flex;
+		flex-direction: row;
+		gap: 3rem;
+
+		a {
+			margin: 2px;
+			padding: 0.5rem;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&:hover,
+			&:focus-within,
+			&:active {
+				margin: 0;
+				border: black 1px solid;
+				border-radius: 1rem;
+			}
+			
+			img {
+				width: 3rem;
+				
+				mix-blend-mode: multiply;
+
+				filter: brightness(0) grayscale(100%);
+			}
+		}
 	}
 
 	.submit-form {
-		margin: 2rem;
-
 		width: clamp(16rem, 80%, 150rem);
 
 		display: flex;
