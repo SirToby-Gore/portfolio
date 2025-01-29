@@ -1,14 +1,14 @@
 function setCssVariablesForImageSpinner(): void {
-	const banners: HTMLCollectionOf<Element> = document.getElementsByClassName('banner');
+	const banners = document.getElementsByClassName('banner') as HTMLCollectionOf<HTMLDivElement>;
 
 	for (let index = 0; index < banners.length; index++) {
-		const banner = banners[index];
+		const banner = banners[index] as HTMLDivElement;
 		
-		const sliders: HTMLCollectionOf<Element> = banner.getElementsByClassName('slider');
+		const sliders = banner.getElementsByClassName('slider') as HTMLCollectionOf<HTMLDivElement>;
 
 		for (let i = 0; i < sliders.length; i++) {
 			const slider = sliders[i] as HTMLDivElement;
-			const sliderItemChildren = slider.getElementsByClassName('item');
+			const sliderItemChildren = slider.getElementsByClassName('item') as HTMLCollectionOf<HTMLDivElement>;
 			
 			slider.style.setProperty('--quantity', sliderItemChildren.length.toString());
 			
@@ -22,14 +22,14 @@ function setCssVariablesForImageSpinner(): void {
 }
 
 function setCssVariablesForImageSlider(): void {
-	const sliders: HTMLCollectionOf<Element> = document.getElementsByClassName('image-slider');
+	const sliders = document.getElementsByClassName('image-slider') as HTMLCollectionOf<HTMLDivElement>;
 
 	for (let index = 0; index < sliders.length; index++) {
 		const slider = sliders[index] as HTMLDivElement;
 
 		slider.style.setProperty('--quantity', slider.getElementsByClassName('item').length.toString());
 
-		const sliderItemChildren = slider.getElementsByClassName('item');
+		const sliderItemChildren = slider.getElementsByClassName('item') as HTMLCollectionOf<HTMLDivElement>;
 		
 		for (let i = 0; i < sliderItemChildren.length; i++) {
 			const item = sliderItemChildren[i] as HTMLDivElement;
@@ -39,7 +39,7 @@ function setCssVariablesForImageSlider(): void {
 	}
 }
 
-function setCssVariables() {
+function setCssVariables(): void {
 	setCssVariablesForImageSpinner();
 	setCssVariablesForImageSlider();
 }

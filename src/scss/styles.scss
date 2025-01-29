@@ -236,19 +236,18 @@ section {
 	margin: 0;
 	padding: 5rem;
 
-	min-height: 80dvh;
+	min-height: 100dvh;
 }
 
 #navbar {
 	position: fixed;
+	top: 0;
 
 	width: 100%;
 
-	top: 0;
-
 	$alpha: 0.8;
 	background-color: light-dark(rgba(61, 61, 61, $alpha), rgba(30, 30, 30, $alpha));
-	backdrop-filter: blur(1rem);
+	backdrop-filter: blur(0.5rem);
 
 	z-index: 5;
 
@@ -264,8 +263,11 @@ section {
 }
 
 #projects {
-	$colour: goldenrod;
-	background-color: light-dark($colour, color.adjust($colour, $lightness: -10%));
+	background-color: light-dark(goldenrod, orange);
+
+	h2 {
+		margin-bottom: 2rem;
+	}
 }
 
 #about {
