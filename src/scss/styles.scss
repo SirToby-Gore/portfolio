@@ -20,7 +20,7 @@ body {
 	text-transform: uppercase;
 	
 	@if $use-margin {
-		margin: 0 $size;
+		margin: $size*0.5 $size;
 	}
 }
 
@@ -57,7 +57,7 @@ $text-colours: (
 
 $button-colour: orange;
 
-.banner {
+.image-carousel {
 	width: 100%;
 	height: 100vh;
 
@@ -97,6 +97,10 @@ $button-colour: orange;
 			to {
 				transform: $perspective rotateX(-16deg) rotateY(360deg);
 			}
+		}
+
+		&:has(.item:hover) {
+			animation-play-state: paused;
 		}
 
 		.item {
@@ -232,6 +236,16 @@ $button-colour: orange;
 	}
 }
 
+p {
+	$font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+	font-family: $font;
+	
+	* {
+		font-family: $font;
+	}
+}
+
 section {
 	margin: 0;
 	padding: 5rem;
@@ -281,6 +295,28 @@ section {
 #skills {
 	
 	background-color: light-dark(#ff392e, #cf0a00);
+}
+
+#qualification {
+	background-color: light-dark(silver, gray);
+
+	.qualification {
+		margin: 2rem;
+		border-radius: 1rem;
+		padding: 2rem;
+
+		background-color: light-dark(white, darkgray);
+
+		* {
+			margin: 1rem 0;
+		}
+
+		ul {
+			li {
+				margin: 0.5rem;
+			}
+		}
+	}
 }
 
 #contact {

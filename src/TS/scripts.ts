@@ -1,5 +1,5 @@
 function setCssVariablesForImageSpinner(): void {
-	const banners = document.getElementsByClassName('banner') as HTMLCollectionOf<HTMLDivElement>;
+	const banners = document.getElementsByClassName('image-carousel') as HTMLCollectionOf<HTMLDivElement>;
 
 	for (let index = 0; index < banners.length; index++) {
 		const banner = banners[index] as HTMLDivElement;
