@@ -236,6 +236,24 @@ $button-colour: orange;
 	}
 }
 
+@mixin sub-section($background-colour) {
+	margin: 2rem;
+		border-radius: 1rem;
+		padding: 2rem;
+
+		background-color: $background-colour;
+
+		* {
+			margin: 1rem 0;
+		}
+
+		ul {
+			li {
+				margin: 0.5rem;
+			}
+		}
+}
+
 p {
 	$font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
@@ -243,6 +261,10 @@ p {
 	
 	* {
 		font-family: $font;
+	}
+
+	span {
+		font-weight: bold;
 	}
 }
 
@@ -282,45 +304,42 @@ section {
 	h2 {
 		margin-bottom: 2rem;
 	}
+
+	.project {
+		@include sub-section(light-dark(yellow, coral));
+	}
 }
 
 #about {
 	background-color: light-dark(lightblue, blue);
 
-	p {
-		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	.paragraph {
+		@include sub-section(light-dark(blue, navy))
 	}
 }
 
 #skills {
-	
 	background-color: light-dark(#ff392e, #cf0a00);
+
+	.skill {
+		@include sub-section(light-dark(crimson, darkred));
+	}
 }
 
 #qualification {
 	background-color: light-dark(silver, gray);
 
 	.qualification {
-		margin: 2rem;
-		border-radius: 1rem;
-		padding: 2rem;
-
-		background-color: light-dark(white, darkgray);
-
-		* {
-			margin: 1rem 0;
-		}
-
-		ul {
-			li {
-				margin: 0.5rem;
-			}
-		}
+		@include sub-section(light-dark(white, darkgray));
 	}
 }
 
 #experiences {
-	background-color: light-dark(beige, brown);
+	background-color: light-dark(pink, brown);
+
+	.experience {
+		@include sub-section(light-dark(brown, color.adjust(brown, $lightness: -20%)));
+	}
 }
 
 #contact {
