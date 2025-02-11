@@ -188,10 +188,10 @@ $button-colour: orange;
 			img {
 				width: 100%;
 
-				filter: grayscale(100%);
+				filter: greyscale(100%);
 
 				&:hover {
-					filter: grayscale(0);
+					filter: greyscale(0);
 
 					scale: 1.2;
 				}
@@ -306,7 +306,7 @@ section {
 	}
 
 	.project {
-		@include sub-section(light-dark(yellow, coral));
+		@include sub-section(light-dark(orange, color.adjust(orange, $lightness: -15%)));
 	}
 }
 
@@ -314,7 +314,7 @@ section {
 	background-color: light-dark(lightblue, blue);
 
 	.paragraph {
-		@include sub-section(light-dark(blue, navy))
+		@include sub-section(light-dark(cadetblue, navy))
 	}
 }
 
@@ -327,10 +327,10 @@ section {
 }
 
 #qualification {
-	background-color: light-dark(silver, gray);
+	background-color: light-dark(silver, grey);
 
 	.qualification {
-		@include sub-section(light-dark(white, darkgray));
+		@include sub-section(light-dark(white, dimgrey));
 	}
 }
 
@@ -338,7 +338,7 @@ section {
 	background-color: light-dark(pink, brown);
 
 	.experience {
-		@include sub-section(light-dark(brown, color.adjust(brown, $lightness: -20%)));
+		@include sub-section(light-dark(color.adjust(red, $lightness: 15%), color.adjust(brown, $lightness: -20%)));
 	}
 }
 
@@ -427,3 +427,7 @@ section {
 		}
 	}
 }
+
+
+
+
