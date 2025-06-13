@@ -1,0 +1,116 @@
+:root {
+  color-scheme: light dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: hsl(0, 0%, 125.2941176471%);
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-family: monospace;
+  font-size: 1rem;
+}
+a:hover, a:focus-within, a:active {
+  color: rgb(166.5, 166.5, 166.5);
+}
+a:target {
+  display: block;
+  position: relative;
+}
+
+body {
+  background-image: url("../assets/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#navbar {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: last baseline;
+  z-index: 1;
+  background-image: radial-gradient(farthest-corner at 50% 100%, rgba(255, 255, 255, 0.15), transparent);
+  backdrop-filter: blur(2rem);
+  border: rgb(192, 192, 192) 2px solid;
+  border-radius: 2rem;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+#navbar .name {
+  align-items: inherit;
+  text-transform: capitalize;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.6rem;
+}
+#navbar .links {
+  align-items: inherit;
+  display: inline-flex;
+  flex-direction: row;
+  gap: 0.6rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 7rem;
+}
+main .box {
+  margin: 5rem 0;
+  scroll-margin-top: 10rem;
+  background-image: radial-gradient(farthest-corner at 50% 100%, rgba(255, 255, 255, 0.15), transparent);
+  backdrop-filter: blur(2rem);
+  border: rgb(192, 192, 192) 2px solid;
+  border-radius: 2rem;
+  border-radius: 2rem;
+  padding: 1rem;
+  padding: 0.7rem 2rem;
+}
+main .box .title {
+  text-transform: lowercase;
+  text-decoration: underline;
+}
+main .box .title::first-letter {
+  text-transform: uppercase;
+}
+main .box hr {
+  color: hsl(0, 0%, 125.2941176471%);
+}
+main .box .sub-title .info {
+  font-size: large;
+  text-transform: capitalize;
+}
+main .box .sub-title .info + .info::before {
+  content: "| ";
+  margin: 0.5rem;
+}
+main .box .sub-text p {
+  text-transform: lowercase;
+}
+main .box .sub-text p::first-letter {
+  text-transform: uppercase;
+}
+main .box#contact .contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+}
+main .box#contact .contact * {
+  display: inline;
+}
+main .box#contact .contact img {
+  aspect-ratio: 1;
+  width: 3rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

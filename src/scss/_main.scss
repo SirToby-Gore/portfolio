@@ -1,0 +1,65 @@
+@use 'colours' as *;
+@use 'mixins' as *;
+
+main {
+	display: flex;
+	flex-direction: column;
+	padding: 3rem 7rem;
+
+	.box {
+		margin: 5rem 0;
+
+		scroll-margin-top: 10rem;
+
+		@include background-blur();
+		border-radius: 2rem;
+		padding: 1rem;
+		
+		padding: 0.7rem 2rem;
+		
+		.title {
+			@include capitalise();
+			text-decoration: underline;
+		}
+
+		hr {
+			color: $text-colour;
+		}
+
+		.sub-title {
+			.info {
+				font-size: large;
+				text-transform: capitalize;
+			}
+			.info + .info::before {
+				content: '| ';
+				margin: 0.5rem;
+			}
+		}	
+
+		.sub-text {
+			p {
+				@include capitalise();
+			}
+		}
+	}
+
+	.box#contact {
+		.contact {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+			gap: 0.6rem;
+
+			* {
+				display: inline;
+			}
+
+			img {
+				aspect-ratio: 1;
+				width: 3rem;
+			}
+		}
+	}
+}

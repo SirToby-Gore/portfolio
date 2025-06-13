@@ -1,0 +1,21 @@
+@use 'colours' as *;
+
+@mixin background-blur($colour: $background) {
+	background-image: radial-gradient(
+		farthest-corner at 50% 100%,
+		rgba(white, 0.15),
+		transparent
+	);
+
+	backdrop-filter: blur(2rem);
+	border: $colour 2px solid;
+	border-radius: 2rem;
+}
+
+@mixin capitalise() {
+	text-transform: lowercase;
+
+	&::first-letter {
+		text-transform: uppercase;
+	}
+}
