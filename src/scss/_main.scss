@@ -42,6 +42,12 @@ main {
 				@include capitalise();
 			}
 		}
+
+		.project {
+			.info {
+				@include capitalise();
+			}
+		}
 	}
 
 	.box#contact {

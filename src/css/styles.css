@@ -99,6 +99,12 @@ main .box .sub-text p {
 main .box .sub-text p::first-letter {
   text-transform: uppercase;
 }
+main .box .project .info {
+  text-transform: lowercase;
+}
+main .box .project .info::first-letter {
+  text-transform: uppercase;
+}
 main .box#contact .contact {
   display: flex;
   flex-direction: row;
