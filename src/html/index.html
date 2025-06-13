@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+    <meta charset="UTF-8">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="This is my portfolio website where I will post my projects and updates about my life.">
+    <meta name="keywords" content="Toby, portfolio, projects, website, html, css, js">
+    <meta name="author" content="Toby">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="../assets/image/favicon.bmp">
+
+    <link rel="stylesheet" href="../scss/styles.css">
+</head>
+<body>
+    
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="padding"></div>
+
+    <div id="home">
+        <h1>
+            Hello I am Toby
+        </h1>
+        <p>I am a young programmer who is still in school. I am from Suffolk in the UK. I am currently learning HTML, CSS and JavaScript. I am also learning C# and Java. I am interested in video games and I want to make my own one day.</p>
+    </div>
+
+    <div id="about">
+        <h1>
+            About me
+        </h1>
+        <p>
+            I am a space pirate
+            sailing the seven seas in search of the legendary golden pineapple. I have fought off hordes of ninja robots and outsmarted the evil squid king. I am a master of the ancient art of Extreme Croquet and have climbed to the top of mount everest blindfolded. I am a living legend, a hero of the people, and a god among mortals.
+            I have a pet dragon called "Steve" who helps me with my code. He is very good at finding bugs and is always happy to help with any problems I have. He is also very good at making me laugh and is always up for a good game of "Code-Fu".
+        </p>
+    </div>
+
+    <div id="hobbies">
+        <h1>
+            Hobbies
+        </h1>
+        <p> I like to kayak <img src="../assets/image/kayak.bmp" alt="kayaking"> and I also like cycling <img src="../assets/image/bike.bmp" alt="bike">.</p>
+    </div>
+
+    <div id="projects">
+        <h1>Projects</h1>
+        <div id="haas">
+            <h2>Haas</h2>
+            <img style="width: 20%; height: 20%;" src="../assets/image/haas.ico" alt="a picture of my amazing code I did for the HAAS project">
+        </div>
+        <div class="calculator">
+            <h2>Calculator</h2>
+            <iframe src="../../../calculator/src/html/index.html" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <div id="contact">
+        <h1>
+            Contact me
+        </h1>
+        <form action="">
+            <input type="email" placeholder="your Email" id="email">
+            <input type="text" placeholder="your name" id="name">
+            <input type="text" placeholder="your national ID" id="nationalID">
+            <input type="number" placeholder="your credit card number" id="creditCard" maxlength="16" minlength="16">
+            <input type="text" placeholder="your message" id="message">
+            <button onclick="play()" type="submit" id="submit">Submit</button>
+        </form>
+        <a  href="https://forms.office.com/e/vdiV3LYM4x">Rate my website</a>
+    </div>
+
+    <footer>
+        <div id="line"></div>
+        <p>Toby Gore</p>
+        <p>© 2024</p>
+        <p>Phone: <span>07912 224567</span></p>
+        <p>Email: <span>W23723339@student.wsc.ac.uk</span></p>
+        <p>github: <a href="https://github.com/SirToby-Gore">SirToby-gore</a></p>
+    </footer>   
+
+    <div class="padding"></div>
+    
+</body>
+</html>

@@ -1,0 +1,274 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes rainbow-gradient {
+  0% {
+    color: #FF0000;
+  }
+  25% {
+    color: #FF7F00;
+  }
+  50% {
+    color: #FFFF00;
+  }
+  75% {
+    color: #00FF00;
+  }
+  100% {
+    color: #0000FF;
+  }
+}
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  background-image: url("../assets/image/background.webp");
+  background-color: transparent;
+  background-attachment: fixed;
+  background-size: cover;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-image: url("../assets/image/wallpaper.png");
+  }
+}
+
+nav {
+  width: 100vw;
+  height: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  border-radius: 10px;
+  border: white 1px solid;
+  padding-left: 12px;
+  padding-right: 12px;
+  z-index: 1;
+}
+nav:hover {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  top: 40%;
+}
+nav a:active {
+  color: #a3a3e3;
+}
+
+.padding {
+  height: 100px;
+}
+
+#home {
+  border: 3px grey solid;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+#about {
+  border: 3px grey solid;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+#hobbies {
+  border: 3px grey solid;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+#hobbies p img {
+  width: 50px;
+  aspect-ratio: 1;
+  display: inline;
+}
+#hobbies p img:hover {
+  transition-duration: 0.5s;
+  width: 400px;
+}
+#hobbies p img:not(:hover) {
+  transition-duration: 0.2s;
+}
+
+#projects {
+  border: 3px grey solid;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+#projects h1,
+#projects h2 {
+  -webkit-text-decoration: underline black;
+          text-decoration: underline black;
+}
+#projects h1 {
+  size: xx-large;
+}
+#projects div h2 {
+  size: medium;
+}
+#projects img {
+  animation: spin 1s infinite linear;
+}
+#projects img:hover {
+  animation: spin-reverse 1s infinite linear;
+}
+#projects .calculator iframe {
+  width: 150px;
+  aspect-ratio: 2/3;
+  border-radius: 7px;
+}
+#projects .calculator iframe:hover {
+  transition-duration: 0.5s;
+  width: 400px;
+}
+#projects .calculator iframe:not(:hover) {
+  transition-duration: 0.2s;
+}
+
+#contact {
+  border: 3px grey solid;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+#contact form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+#contact form input {
+  margin: 5px;
+  background-color: rgba(60, 178, 1, 0.2);
+  color: seashell;
+}
+#contact form input::-moz-placeholder {
+  color: silver;
+}
+#contact form input::placeholder {
+  color: silver;
+}
+#contact form input *:invalid + p {
+  display: block;
+  color: red;
+}
+#contact form:invalid #submit {
+  color: red;
+  cursor: not-allowed;
+}
+#contact form:valid #submit {
+  color: seagreen;
+  cursor: pointer;
+}
+#contact form #name,
+#contact form #email {
+  width: 200px;
+}
+#contact form #nationalID,
+#contact form #creditCard {
+  width: 300px;
+}
+#contact form #message {
+  height: 100px;
+}
+#contact form button {
+  color: silver;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 3px grey solid;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+#contact a {
+  color: #3cb201;
+}
+
+footer {
+  background-color: rgba(19, 19, 19, 0.5);
+  color: #fcfcfc;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  padding-left: 12px;
+  padding-right: 12px;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+footer #line {
+  display: none;
+}
+footer:not(:hover) {
+  transition-duration: 1.5s;
+}
+footer:not(:hover) {
+  height: 20px;
+}
+footer:not(:hover) #line {
+  display: block;
+  position: relative;
+  width: 60px;
+  height: 4px;
+  background-color: #fcfcfc;
+  border-radius: 1px;
+  margin: 2px;
+}
+footer:not(:hover) p {
+  display: none;
+}
+footer:hover {
+  background-color: rgba(19, 19, 19, 0.9);
+  transition-duration: 0.8s;
+}
+footer #submit-form {
+  width: 50px;
+  aspect-ratio: 1;
+}
+footer #submit-form:hover {
+  width: 300px;
+  transition-duration: 0.5s;
+}
+footer #submit-form:not(:hover) {
+  transition-duration: 0.5s;
+}
+footer a {
+  color: white;
+}/*# sourceMappingURL=styles.css.map */

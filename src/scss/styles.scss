@@ -1,0 +1,260 @@
+@use './animations/animation' as *;
+
+$blue: #5454cc;
+$white: #fcfcfc;
+$red: red;
+
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    background-image: url("../assets/image/background.webp");
+
+    @media (prefers-color-scheme: dark) {
+        background-image: url('../assets/image/wallpaper.png');
+    }
+    
+    background-color: transparent;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+nav {
+    & {
+        width: 100vw;
+        height: 40px;
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        position: fixed;
+        top: 0;
+        backdrop-filter: blur(1px);
+        border-radius: 10px;
+        border: white 1px solid;
+        padding-left: 12px;
+        padding-right: 12px;
+        z-index: 1;
+    }
+    &:hover {
+        backdrop-filter: blur(5px);
+    }
+    a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        position: relative;
+        top: 40%;
+    }
+    a:active {
+        color: lighten($blue, 20%)
+    }
+}
+
+@mixin card() {
+    border: 3px grey solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.padding {
+    height: 100px;
+}
+
+#home {
+    @include card();
+}
+
+#about{
+    @include card();
+}
+
+#hobbies {
+    @include card();
+
+    p {
+        img {
+            width: 50px;
+            aspect-ratio: 1;
+            display: inline;
+
+            &:hover{
+                transition-duration: 0.5s;
+                width: 400px
+            }
+
+            &:not(:hover) {
+                transition-duration: 0.2s
+            }
+        }
+    }
+}
+
+#projects{
+    @include card(); 
+
+    h1,
+    h2 {
+        text-decoration: underline black;
+    }
+
+    h1 {
+        size: xx-large;
+    }
+
+    div h2 {
+        size: medium;
+    }
+    
+    img {
+        animation: spin 1s infinite linear;
+        &:hover {
+            animation: spin-reverse 1s infinite linear;
+        }
+    }
+
+    .calculator {
+        iframe {
+            width: 150px;
+            aspect-ratio: 2/3;
+            border-radius: 7px;
+
+            &:hover {
+                transition-duration: 0.5s;
+                width: 400px;
+            }
+
+            &:not(:hover) {
+                transition-duration: 0.2s
+            }
+        }
+    }
+}
+
+#contact{
+    @include card();
+
+    form {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        input {
+            margin: 5px;
+            background-color: rgba($color: #3cb201, $alpha: 0.2); 
+            &::placeholder {
+                color: silver;
+            }
+            
+            color: seashell;
+
+            *:invalid + p {
+                display: block;
+                color: $red;
+            }
+
+        }
+
+        &:invalid #submit {
+            color: red;
+            cursor: not-allowed;
+        }
+
+        &:valid #submit {
+            color: seagreen;
+            cursor: pointer;
+        }
+
+        #name,
+        #email {
+            width: 200px;
+        }
+
+        #nationalID,
+        #creditCard {
+            width: 300px;
+        }
+
+        #message {
+            height: 100px;
+        }
+        
+        button {
+            color: silver;
+            font-weight: bold;
+            background-color: rgba($color: #000000, $alpha: 0.1);
+            border: 3px grey solid;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+    }
+
+    a {
+        color: #3cb201;
+    }
+}
+
+footer {
+    background-color: rgba(#131313, 0.5);
+    color: $white;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding-left: 12px;
+    padding-right: 12px;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+
+    #line {
+        display: none;
+    }
+
+    &:not(:hover) {
+        & {
+            height: 20px;
+        }
+
+        #line {
+            display: block;
+            position: relative;
+            width: 60px;
+            height: 4px;
+            background-color: $white;
+            border-radius: 1px;
+            margin: 2px;
+        }
+
+        p {
+            display: none;
+        }
+        transition-duration: 1.5s;
+    }
+
+    &:hover {
+        background-color: rgba(#131313, 0.9);
+        transition-duration: 0.8s;
+    }
+
+    #submit-form {
+        width: 50px;
+        aspect-ratio: 1;
+
+        &:hover {
+            width: 300px;
+            transition-duration: 0.5s;
+        }
+
+        &:not(:hover) {
+            transition-duration: 0.5s;
+        }
+    }
+
+    a {
+        color: white;
+    }
+}
