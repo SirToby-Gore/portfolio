@@ -9,18 +9,19 @@
 </head>
 <body>
 
-	<nav id="navbar">
-		<a class="name" href="#contact">toby gore</a>
+	<details id="navbar" open>
+		<summary class="name" href="#contact">toby gore</summary>
 		
 		<ul class="links">
-			<a href="#about">about me</a>
+			<a href="#about">about</a>
 			<a href="#experience">experience</a>
 			<a href="#education">education</a>
 			<a href="#volunteering">volunteering</a>
 			<a href="#projects">projects</a>
+			<a href="#languages">languages</a>
 			<a href="#contact">contact</a>
 		</ul>
-	</nav>
+	</details>
 
 	<main>
 		<div class="box" id="about">
@@ -190,6 +191,27 @@
 			<h1 class="title">My projects</h1>
 
 			<div class="project">
+				<a target="_blank" href="https://github.com/SirToby-Gore/start-calculator"><h2 class="sub-title">Star calculator</h2></a>
+				<p>This tool allows users to create a clip path for a star shape.</p>
+			</div>
+
+			<hr>
+
+			<div class="project">
+				<a target="_blank" href="https://github.com/SirToby-Gore/cv-creator"><h2 class="sub-title">CV generator</h2></a>
+				<p>This project allows users to quickly create a cv from a json.</p>
+			</div>
+
+			<hr>
+
+			<div class="project">
+				<a target="_blank" href="https://github.com/SirToby-Gore/code-against-humanity"><h2 class="sub-title">Code against humanity</h2></a>
+				<p>This is a spin on the game Cards Against Humanity built in python but with a web port.</p>
+			</div>
+
+			<hr>
+
+			<div class="project">
 				<a target="_blank" href="https://github.com/SirToby-Gore/CSS-HTML-help"><h2 class="sub-title">CSS and HTML help</h2></a>
 				<p>This is a repo for people to use filled with handy snippets of coding info and html and css snippets.</p>
 			</div>
@@ -261,35 +283,79 @@
 			</div>
 		</div>
 
+		<div class="box" id="languages">
+			<div class="language" id="python">
+				<h2 class="title">Python</h2>
+				<img src="../assets/images/python.svg" alt="python" class="logo">
+				<p class="description"></p>
+			</div>
+			<div class="language" id="assembly">
+				<h2 class="title">Assembly</h2>
+				<img src="../assets/images/assembly.svg" alt="assembly" class="logo">
+				<p class="description"></p>
+			</div>
+
+			<div class="language" id="dart">
+				<h2 class="title">Dart</h2>
+				<img src="../assets/images/dart.svg" alt="dart" class="logo">
+				<p class="description"></p>
+			</div>
+
+			<div class="language" id="ruby">
+				<h2 class="title">Ruby</h2>
+				<img src="../assets/images/ruby.svg" alt="ruby" class="logo">
+				<p class="description"></p>
+			</div>
+
+			<div class="language" id="cobol">
+				<h2 class="title">COBOL</h2>
+				<img src="../assets/images/cobol.svg" alt="cobol" class="logo">
+				<p class="description"></p>
+			</div>
+
+			<div class="language" id="cpp">
+				<h2 class="title">C/C++</h2>
+				<img src="../assets/images/c-cpp.svg" alt="c-cpp" class="logo">
+				<p class="description"></p>
+			</div>
+		</div>
+
 		<div class="box" id="contact">
 			<h1 class="title">Get in contact</h1>
 
-			<div class="contact">
+			<div class="contact" title="email">
 				<a href="mailto:tobyedwardgore@gmail.com">
-					<img src="../assets/images/email.svg" alt="email" class="icon">
+					<img src="../assets/images/email.svg" alt="email">
 				</a>
 				<p class="info">tobyedwardgore@gmail.com</p>
 			</div>
 
-			<div class="contact">
+			<div class="contact" title="phone">
 				<a href="tel:+447943600797">
 					<img src="../assets/images/phone.svg" alt="phone">
 				</a>
 				<p class="info">07943 600797</p>
 			</div>
 
-			<div class="contact">
+			<div class="contact" title="github">
 				<a target="_blank" href="https://github.com/SirToby-Gore">
 					<img src="../assets/images/guthib.svg" alt="github">
 				</a>
 				<p class="info">SirToby-Gore</p>
 			</div>
 
-			<div class="contact">
+			<div class="contact" title="linked in">
 				<a target="_blank" href="https://www.linkedin.com/in/toby-gore-b4021626b/">
 					<img src="../assets/images/linkedin.svg" alt="linked in">
 				</a>
 				<p>toby-gore-b4021626b</p>
+			</div>
+
+			<div class="contact" title="instagram">
+				<a href="https://www.instagram.com/sir.toby_gore/" target="_blank">
+					<img src="../assets/images/insta.svg" alt="instagram">
+				</a>
+				<p>sir.toby_gore</p>
 			</div>
 		</div>
 
